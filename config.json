@@ -1,0 +1,73 @@
+{
+  "server": {
+    "port": 5000,
+    "debug": true,
+    "host": "0.0.0.0"
+  },
+  "ollama": {
+    "base_url": "http://localhost:11434",
+    "api_endpoints": {
+      "generate": "/api/generate",
+      "tags": "/api/tags"
+    },
+    "model": "tinydolphin:latest",
+    "display_name": "LLM",
+    "request_timeout": 60,
+    "connection_check_timeout": 5,
+    "history_context_limit": 50
+  },
+  "memory": {
+    "max_sessions": 10,
+    "max_history_per_session": 50,
+    "memory_file": "chat_memory.json",
+    "auto_save": true
+  },
+  "ui": {
+    "app_name": "Ollama Neural Interface",
+    "display_name": "Local Ollama Interface",
+    "theme": {
+      "primary_color": "#4a00e0",
+      "secondary_color": "#8e2de2",
+      "background_dark": "#121212",
+      "background_light": "#1a1a1a",
+      "text_color": "#e0e0e0",
+      "accent_color": "#00d9ff",
+      "success_color": "#00e676",
+      "error_color": "#ff1744",
+      "panel_bg": "rgba(26, 26, 26, 0.85)",
+      "panel_border": "rgba(255, 255, 255, 0.1)",
+      "panel_shadow": "0 8px 32px rgba(0, 0, 0, 0.4)",
+      "transition_speed": "0.5s"
+    },
+    "chat": {
+      "typing_speed": 15,
+      "typing_delay": 500,
+      "welcome_message": "Hello! I am running locally via Ollama. How can I help you today?",
+      "placeholders": {
+        "input": "Ask anything......"
+      },
+      "status_check_interval": 10000
+    }
+  },
+  "neural_visualization": {
+    "neuron_density": 0.00012,
+    "neuron_min_size": 2,
+    "neuron_max_size": 6,
+    "connection_distance_factor": 0.20,
+    "connection_opacity": 0.15,
+    "active_neuron_color": "#00d9ff",
+    "default_neuron_color": "#4a00e0",
+    "background_color": "#121212",
+    "particle_density": 0.00006,
+    "max_signal_particles": 35,
+    "random_activation_chance": 0.06,
+    "activation_time": 1,
+    "fast_neuron_percentage": 0.6,
+    "slow_activation_factor": 0.4,
+    "thinking_activation_multiplier": 3.0,
+    "thinking_signal_multiplier": 2.0,
+    "thinking_fade_speed": 0.02,
+    "thinking_max_particles": 80,
+    "max_active_neurons": 30
+  }
+} 

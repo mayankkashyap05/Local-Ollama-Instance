@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ollama Neural Interface</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Use local highlight.js style -->
+    <link rel="stylesheet" href="libs/atom-one-dark.min.css">
+    <!-- Config and application state will be loaded from server -->
+    <script>
+        // Global object to store application configuration
+        window.appConfig = null;
+    </script>
+</head>
+<body>
+    <!-- Fullscreen Neural Visualization -->
+    <div class="neural-background">
+        <canvas id="neural-canvas"></canvas>
+        <div class="thinking-overlay">
+            <div class="thinking-text">Thinking...</div>
+        </div>
+    </div>
+    
+    <!-- Custom Confirmation Dialog -->
+    <div class="confirm-dialog-overlay" id="confirm-dialog-overlay">
+        <div class="confirm-dialog">
+            <div class="confirm-dialog-title">Clear Chat History</div>
+            <div class="confirm-dialog-message">Are you sure you want to clear your chat history? This cannot be undone.</div>
+            <div class="confirm-dialog-buttons">
+                <button class="confirm-dialog-button confirm-dialog-cancel" id="confirm-dialog-cancel">Cancel</button>
+                <button class="confirm-dialog-button confirm-dialog-confirm" id="confirm-dialog-confirm">Clear History</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating Chat Interface -->
+    <div class="app-container">
+        <header>
+            <h1>Ollama Neural Interface</h1>
+            <div class="model-info">
+                <span id="model-badge" class="model-badge">Loading model...</span>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Connected</span>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <button id="clear-chat-btn" class="clear-chat-btn" title="Clear chat history">
+                        <span class="clear-icon">🗑️</span>
+                        <span class="clear-text">Clear Context</span>
+                    </button>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Messages will be added here by JavaScript -->
+                </div>
+                
+                <!-- Scroll to bottom button -->
+                <div class="scroll-to-bottom" id="scroll-to-bottom">
+                    <span>↓</span>
+                </div>
+                
+                <div class="chat-input-area">
+                    <textarea id="user-input" placeholder="Ask anything......"></textarea>
+                    <button id="send-button">
+                        <span class="send-icon">→</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-text">LLMs can make mistakes</div>
+        </footer>
+    </div>
+
+    <!-- Local Libraries -->
+    <script src="libs/gsap.min.js"></script>
+    
+    <!-- Local Syntax highlighting -->
+    <script src="libs/highlight.min.js"></script>
+    
+    <!-- Application Scripts -->
+    <script src="scripts/config.js"></script>
+    <script src="scripts/neuron.js"></script>
+    <script src="scripts/chat.js"></script>
+</body>
+</html> 
