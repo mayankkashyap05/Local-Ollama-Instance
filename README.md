@@ -222,7 +222,9 @@ The interface consists of several key components:
 4. **Model Badge** - Shows the current active model
 5. **Status Indicator** - Shows connection status to Ollama
 
-![Interface Explanation](https://example.com/interface_explanation.png)
+<div align="center">
+  <img src="static/images/interface_explanation.png" alt="Interface Explanation" width="800">
+</div>
 
 ## ⚙️ Configuration
 
@@ -474,8 +476,6 @@ This project uses the following third-party components:
 - Mobile experience is supported but desktop is recommended for full visualization
 - Large language models can sometimes provide incorrect information
 - Chat history is stored locally in `chat_memory.json`
-
-## 🤝 Contributing
 
 Contributions are welcome! If you'd like to improve the Ollama Neural Interface, please:
 
