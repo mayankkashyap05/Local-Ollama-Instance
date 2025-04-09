@@ -489,4 +489,4 @@ Contributions are welcome! If you'd like to improve the Ollama Neural Interface,
 
 If you have questions, suggestions, or need help, reach out through:
 - GitHub Issues
-- Email: your.email@example.com
+- Email: kashyapmayank446@gmail.com
